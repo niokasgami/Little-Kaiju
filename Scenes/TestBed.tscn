@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Characters/Cuddle/Cuddle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Characters/Cuddle/Cuddle_Temp.png" type="Texture" id=2]
+[ext_resource path="res://Source/Entities/Cuddle.cs" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Cuddle" parent="." instance=ExtResource( 1 )]
+position = Vector2( 535, 499 )
+script = ExtResource( 3 )
+
+[node name="CuddleTemp" type="Sprite" parent="."]
+position = Vector2( 58, 560 )
+texture = ExtResource( 2 )
+
+[node name="CuddleTemp2" type="Sprite" parent="."]
+position = Vector2( 1042, 690 )
+texture = ExtResource( 2 )
+
+[node name="CuddleTemp3" type="Sprite" parent="."]
+position = Vector2( 1179, 141 )
+texture = ExtResource( 2 )
+
+[node name="CuddleTemp4" type="Sprite" parent="."]
+position = Vector2( -125, 201.5 )
+scale = Vector2( 1, 0.995 )
+texture = ExtResource( 2 )
