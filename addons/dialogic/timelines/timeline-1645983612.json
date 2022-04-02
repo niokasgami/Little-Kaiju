@@ -1,0 +1,22 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "blablablablabla"
+		},
+		{
+			"event_id": "dialogic_025",
+			"extra": "",
+			"glossary_id": "",
+			"text": "",
+			"title": ""
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4 - DEV",
+		"file": "timeline-1645983612.json",
+		"name": "Test"
+	}
+}

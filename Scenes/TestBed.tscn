@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Characters/Cuddle/Cuddle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Characters/Cuddle/Cuddle_Temp.png" type="Texture" id=2]
+[ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Characters/Adults/Adult.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Cuddle" parent="." instance=ExtResource( 1 )]
+position = Vector2( 535, 499 )
+
+[node name="CuddleTemp2" type="Sprite" parent="."]
+position = Vector2( 1042, 690 )
+texture = ExtResource( 2 )
+
+[node name="CuddleTemp3" type="Sprite" parent="."]
+position = Vector2( 1179, 141 )
+texture = ExtResource( 2 )
+
+[node name="CuddleTemp4" type="Sprite" parent="."]
+position = Vector2( -125, 201.5 )
+scale = Vector2( 1, 0.995 )
+texture = ExtResource( 2 )
+
+[node name="Dialog" parent="." instance=ExtResource( 3 )]
+timeline = "timeline-1648577006.json"
+
+[node name="Adults" parent="." instance=ExtResource( 4 )]
+position = Vector2( 98, 587 )

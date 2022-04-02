@@ -1,0 +1,9 @@
+C:\Users\nioPC\Documents\Little Kaiju\.mono\temp\bin\Debug\Little Kaiju.dll
+C:\Users\nioPC\Documents\Little Kaiju\.mono\temp\bin\Debug\Little Kaiju.pdb
+C:\Users\nioPC\Documents\Little Kaiju\.mono\temp\obj\Debug\Little Kaiju.csproj.AssemblyReference.cache
+C:\Users\nioPC\Documents\Little Kaiju\.mono\temp\obj\Debug\Little Kaiju.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nioPC\Documents\Little Kaiju\.mono\temp\obj\Debug\Little Kaiju.AssemblyInfoInputs.cache
+C:\Users\nioPC\Documents\Little Kaiju\.mono\temp\obj\Debug\Little Kaiju.AssemblyInfo.cs
+C:\Users\nioPC\Documents\Little Kaiju\.mono\temp\obj\Debug\Little Kaiju.csproj.CoreCompileInputs.cache
+C:\Users\nioPC\Documents\Little Kaiju\.mono\temp\obj\Debug\Little Kaiju.dll
+C:\Users\nioPC\Documents\Little Kaiju\.mono\temp\obj\Debug\Little Kaiju.pdb
