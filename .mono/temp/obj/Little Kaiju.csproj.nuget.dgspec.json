@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\USERS\\NIOPC\\DOCUMENTS\\LITTLE KAIJU\\Little Kaiju.csproj": {}
+    "C:\\Users\\nioPC\\Documents\\Little Kaiju\\Little Kaiju.csproj": {}
   },
   "projects": {
-    "C:\\USERS\\NIOPC\\DOCUMENTS\\LITTLE KAIJU\\Little Kaiju.csproj": {
+    "C:\\Users\\nioPC\\Documents\\Little Kaiju\\Little Kaiju.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\USERS\\NIOPC\\DOCUMENTS\\LITTLE KAIJU\\Little Kaiju.csproj",
+        "projectUniqueName": "C:\\Users\\nioPC\\Documents\\Little Kaiju\\Little Kaiju.csproj",
         "projectName": "Little Kaiju",
-        "projectPath": "C:\\USERS\\NIOPC\\DOCUMENTS\\LITTLE KAIJU\\Little Kaiju.csproj",
+        "projectPath": "C:\\Users\\nioPC\\Documents\\Little Kaiju\\Little Kaiju.csproj",
         "packagesPath": "C:\\Users\\nioPC\\.nuget\\packages\\",
-        "outputPath": "C:\\USERS\\NIOPC\\DOCUMENTS\\LITTLE KAIJU\\.mono\\temp\\obj\\",
+        "outputPath": "C:\\Users\\nioPC\\Documents\\Little Kaiju\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
