@@ -19,7 +19,8 @@ namespace Kaiju.Entities {
             velocity = Vector2.Zero;
             if (isFollowing)
             {
-                velocity = Position.DirectionTo(cuddle.Position) * movementSpeed;
+                // maybe stuck it with only changing the X axis?
+                velocity = Position.DirectionTo(cuddle.Position) * movementSpeed; 
             }
             velocity = MoveAndSlide(velocity);
         }
