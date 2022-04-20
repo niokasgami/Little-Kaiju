@@ -5,11 +5,16 @@ namespace Kaiju.Entities
 {
 	public class Cuddle : Entity
 	{
-		private AnimatedSprite animation;
-
+		//private AnimatedSprite animation;
+		private AnimationNodeStateMachinePlayback stateMachine;
+		private bool isMoving;
+		private Sprite sprite;
 		public override void _Ready()
 		{
-			animation = GetNode<AnimatedSprite>("AnimatedSprite");
+
+			var node = GetNode<AnimationTree>("StateMachine");
+			stateMachine = (AnimationNodeStateMachinePlayback)node.Get("parameters/playback");
+			sprite = GetNode<Sprite>("Sprite");
 		}
 
 		public override void UpdateMovement()
@@ -29,14 +34,17 @@ namespace Kaiju.Entities
 			{
 				velocity.x -= 1;
 				direction = Vector2.Left;
+				sprite.Scale = new Vector2(-4,4);
+				isMoving = true;
 			}
 			if (Input.IsActionPressed("right"))
 			{
 				velocity.x += 1;
 				direction = Vector2.Right;
+				sprite.Scale = new Vector2(4, 4);
+				isMoving = true;
 			}
 			velocity = velocity.Normalized() * speed;
-
 		}
 
 		public override void UpdateAction()
@@ -65,24 +73,16 @@ namespace Kaiju.Entities
 
 		public override void UpdateAnimation()
 		{
+			var current = stateMachine.GetCurrentNode();
 			if (!isActionInProgress)
 			{
-				if (Input.IsActionPressed("left"))
+				if (Input.IsActionPressed("left") || Input.IsActionPressed("right"))
 				{
-					animation.FlipH = true;
-					animation.Play("walk");
-					direction = Vector2.Left;
-
-				}
-				else if (Input.IsActionPressed("right"))
-				{
-					animation.FlipH = false;
-					animation.Play("walk");
-					direction = Vector2.Right;
+					stateMachine.Travel("walk");
 				}
 				else
 				{
-					animation.Play("idle");
+					stateMachine.Travel("idle");
 				}
 			}
 		}

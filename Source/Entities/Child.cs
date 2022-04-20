@@ -2,25 +2,26 @@ using Godot;
 using System;
 
 namespace Kaiju.Entities {
-    public class Child : Area2D
+    public class Child : Npc
     {
 
         private bool isFollowing = false;
-        private bool isPlayerNear = false;
-        private KinematicBody2D cuddle;
+        private PhysicsBody2D cuddle = null;
+        private Vector2 velocity = Vector2.Zero;
 
         public override void _Ready()
         {
-            cuddle = Owner.GetNode<KinematicBody2D>("Cuddle");
         }
-        //  // Called every frame. 'delta' is the elapsed time since the previous frame.
-        public override void _Process(float delta)
+
+
+        public override void _PhysicsProcess (float delta)
         {
+            velocity = Vector2.Zero;
             if (isFollowing)
             {
-                var position = GlobalPosition.LinearInterpolate(cuddle.GlobalPosition, 2);
-                GlobalPosition = position;
+                velocity = Position.DirectionTo(cuddle.Position) * movementSpeed;
             }
+            velocity = MoveAndSlide(velocity);
         }
 
         public override void _Input(InputEvent @event)
@@ -43,6 +44,8 @@ namespace Kaiju.Entities {
 
         public void OnChildBodyEntered(PhysicsBody2D body)
         {
+            GD.Print("it collided?");
+            cuddle = body;
             isPlayerNear = true;
         }
         public void OnChildBodyExited(PhysicsBody2D body)

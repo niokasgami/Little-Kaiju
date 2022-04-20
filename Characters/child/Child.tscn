@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Characters/Cuddle/Cuddle_Animated.png" type="Texture" id=1]
 [ext_resource path="res://Source/Entities/Child.cs" type="Script" id=2]
@@ -27,17 +27,26 @@ animations = [ {
 radius = 21.0
 height = 36.0
 
-[node name="Child" type="Area2D"]
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 16.0
+height = 34.0
+
+[node name="Child" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 4 )
 animation = "NormalAni"
-frame = 2
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 5 )
 
-[connection signal="body_entered" from="." to="." method="OnChildBodyEntered"]
-[connection signal="body_exited" from="." to="." method="OnChildBodyExited"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 6 )
+disabled = true
+
+[connection signal="body_entered" from="Area2D" to="." method="OnChildBodyEntered"]
+[connection signal="body_exited" from="Area2D" to="." method="OnChildBodyExited"]

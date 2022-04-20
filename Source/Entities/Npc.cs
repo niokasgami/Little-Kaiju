@@ -5,6 +5,7 @@ namespace Kaiju.Entities
 {
     public class Npc : KinematicBody2D
     {
-        private bool isPlayerNear = false;
+        public bool isPlayerNear = false;
+        public float movementSpeed = 200;
     }
 }
